@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejer-Responsive-Menu</title>
+    <script src="https://kit.fontawesome.com/e87d10dd99.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            text-decoration: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: purple;
+            color: plum;
+            border-color: 2px solid black;
+            padding: 1rem;
+        }
+
+        h1 {
+            display: inline-block;
+            text-align: center;
+        }
+
+        nav {
+            overflow: hidden;
+            transition: all ease 0.3s;
+        }
+
+        li {
+            width: 100%;
+        }
+
+        a {
+            border: 2px solid black;
+            margin: .5rem;
+            text-align: center;
+            display: block;
+            color: purple;
+            font-weight: bold;
+            background-color: plum;
+        }
+
+        .box-tittle {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fa-bars {
+            font-size: 3rem;
+        }
+
+        #menu-btn {
+            display: none;
+        }
+
+        #menu-btn:not(:checked)+*+nav {
+            height: 0px;
+        }
+
+        #menu-btn:checked+*+nav {
+            height: 160px;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                display: block;
+                text-align: center;
+            }
+
+            .fa-bars {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+            }
+
+            #menu-btn:not(:checked)+*+nav {
+                height: initial;
+            }
+
+            #menu-btn:checked+*+nav {
+                height: initial;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <label for="menu-btn"><span class="fa-solid fa-bars"></span></label>
+            <input type="checkbox" id="menu-btn">
+            <h1>Menu Responsive</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Enlace 1</a></li>
+                    <li><a href="#">Enlace 2</a></li>
+                    <li><a href="#">Enlace 3</a></li>
+                    <li><a href="#">Enlace 4</a></li>
+                    <li><a href="#">Enlace 5</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main></main>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

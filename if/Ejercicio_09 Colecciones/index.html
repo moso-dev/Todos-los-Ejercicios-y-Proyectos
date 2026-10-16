@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-calculadora</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 1.5rem;
+        }
+
+        .container {
+            padding: 1rem;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        label,
+        input,
+        button {
+            background-color: #90ee90;
+            color: #788998;
+            padding: 0 0.5rem;
+        }
+
+        button {
+            border: rgb(128, 128, 128, 0.5) 5px solid;
+            border-radius: 0.5rem;
+        }
+
+        input {
+            background-color: white;
+            border: #90ee90 5px solid;
+            text-align: center;
+        }
+
+        .box-resultados {
+            background-color: #d3d3d3;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            margin: 1rem;
+            border: 1px solid black;
+        }
+
+        .box-resultados p {
+            color: #c5bb71;
+            background-color: #e6e6fa;
+            font-size: 1.2rem;
+            margin: 0.5rem;
+            padding-left: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .box-resultados p span {
+            text-align: center;
+            font-size: 1.2rem;
+            display: block;
+            background-color: #90ee90;
+            width: 30%;
+            height: auto;
+        }
+
+        #p_name {
+            background: green;
+            color: white;
+            display: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 0.5rem;
+        }
+
+        /*EJER - 09*/
+        .resultados {
+            background-color: lavender;
+            color: darkgreen;
+            font-family: sans-serif;
+            padding: 0 0.4rem;
+            position: relative;
+            height: 2.25rem;
+            line-height: 2.25rem;
+            margin: 1rem;
+            border: 1px solid black;
+        }
+
+        .resultados input {
+            top: 0;
+            background-color: lightgreen;
+            color: darkgreen;
+            font-weight: bold;
+            font-size: 1.2rem;
+            right: 0;
+            position: absolute;
+            padding-left: 1rem;
+            width: 40%;
+        }
+
+        .resultados span {
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 1px solid;
+            padding: 0.1rem 0.3rem;
+        }
+
+        .mayor {
+            color: blue;
+        }
+
+        .menor {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="box-in1">
+                <label for="in_1">intro número 1</label>
+                <input type="number" id="in_1" autocomplete="off">
+            </div>
+
+            <div class="box-in2">
+                <label for="in_2">intro número 2</label>
+                <input type="number" id="in_2" autocomplete="off">
+            </div>
+
+            <button id="btn">Calcular</button>
+            <button id="btn_2">Calcular El Mayor</button>
+        </header>
+
+        <main>
+            <div class="box-resultados">
+                <p>La suma de los números dá: <span id="suma"></span></p>
+                <p>La resta de los números dá: <span id="resta"></span></p>
+                <p>La multiplicación de los números dá: <span id="multi"></span></p>
+                <p>La división de los números dá: <span id="divi"></span></p>
+                <p>El resto de la división dá: <span id="resto"></span></p>
+            </div>
+
+            <!-- EJER 09 -->
+            <div class="calculo-mayor pizarra">
+                <p class="resultados">
+                    La suma de <span class="mayor borrar"></span> más
+                    <span class="menor borrar"></span> da:
+                    <span id="resultado1" class="borrar"></span>
+                </p>
+                <p class="resultados">
+                    La resta de <span class="mayor borrar"></span> menos
+                    <span class="menor borrar"></span> da:
+                    <span id="resultado2" class="borrar"></span>
+                </p>
+                <p class="resultados">
+                    La multiplicación de <span class="mayor borrar"></span> por
+                    <span class="menor borrar"></span> es igual a:
+                    <span id="resultado3" class="borrar"></span>
+                </p>
+                <p class="resultados">
+                    La división de <span class="mayor borrar"></span> entre
+                    <span class="menor borrar"></span> da:
+                    <span id="resultado4" class="borrar"></span>
+                </p>
+                <p class="resultados">
+                    El resto de la división de <span class="mayor borrar"></span> entre
+                    <span class="menor borrar"></span> es:
+                    <span id="resultado5" class="borrar"></span>
+                </p>
+            </div>
+            <!-- FIN DEL EJER 09 -->
+
+        </main>
+        <footer>
+            <p id="p_name">Estos son tus cálculos, <span id="nombre"></span></p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('nombre').textContent = window.prompt('Introduce tu Nombre:')
+
+        function calcular() {
+            let numero_a = document.getElementById('in_1').value;
+            let numero_b = document.getElementById('in_2').value;
+            numero_a = parseFloat(numero_a);
+            numero_b = parseFloat(numero_b);
+
+            //SUMA
+            document.getElementById('suma').textContent = numero_a + numero_b;
+            //RESTA
+            document.getElementById('resta').textContent = numero_a - numero_b;
+            //MULTIPLICACIÓN
+            document.getElementById('multi').textContent = numero_a * numero_b;
+            //División
+            document.getElementById('divi').textContent = numero_a / numero_b;
+            //RESTO
+            document.getElementById('resto').textContent = numero_a % numero_b;
+
+            //Aparecer párrafo
+            document.getElementById('p_name').style.display = 'initial';
+        }
+        
+        document.getElementById('btn').onclick = calcular;
+        
+        /*EJERCICIO NUMERO 09*/
+        
+        function calcularMayor() {
+            let numero_a = document.getElementById('in_1').value;
+            let numero_b = document.getElementById('in_2').value;
+            let numero_mayor;
+            let numero_menor;
+            numero_a = parseFloat(numero_a);
+            numero_b = parseFloat(numero_b);
+            
+            //encontrar el mayor y menor
+            if (numero_a > numero_b) {
+                numero_mayor = numero_a;
+                numero_menor = numero_b;
+            } else {
+                numero_mayor = numero_b;
+                numero_menor = numero_a;
+            }
+            
+            //recuadros de mayor y menor
+            let mayores = document.getElementsByClassName('mayor');
+            let menores = document.getElementsByClassName('menor');
+            
+            for (const contenedor_mayor of mayores) {
+                contenedor_mayor.textContent = numero_mayor;    
+            }
+            for (const contenedor_menor of menores) {
+                contenedor_menor.textContent = numero_menor;    
+            }
+            
+            //calcular operaciones
+            
+            //suma
+            document.getElementById('resultado1').textContent = numero_mayor + numero_menor;
+            //resta
+            document.getElementById('resultado2').textContent = numero_mayor - numero_menor;
+            //multi
+            document.getElementById('resultado3').textContent = numero_mayor * numero_menor;
+            //division
+            document.getElementById('resultado4').textContent = numero_mayor / numero_menor;
+            //resto
+            document.getElementById('resultado5').textContent = numero_mayor % numero_menor;
+            
+            //Aparecer párrafo
+            document.getElementById('p_name').style.display = 'initial';
+        }
+
+        document.getElementById('btn_2').onclick = calcularMayor;
+    </script>
+</body>
+
+</html>

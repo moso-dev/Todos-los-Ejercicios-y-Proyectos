@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-EJERCICIO</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .modulos {
+            border: 5px solid black;
+            width: 750px;
+            height: 350px;
+            margin: 0rem auto 3rem;
+            padding: 1rem;
+            display: flex;
+            gap: 20px;
+        }
+
+        #modulo4,
+        #modulo5,
+        #modulo6 {
+            flex-wrap: wrap;
+        }
+
+
+        #modulo1 {}
+
+        #modulo2 {
+            justify-content: end;
+            align-items: flex-end;
+        }
+
+        #modulo3 {
+            justify-content: center;
+            align-items: center;
+        }
+
+        #modulo4 {
+            justify-content: left;
+            align-content: start;
+            padding: 0.1rem;
+            padding-right: 4rem;
+        }
+
+        #modulo5 {
+            padding: 0.1rem;
+            justify-content: right;
+            align-content: end;
+            padding-left: 4rem;
+        }
+
+        #modulo6 {
+            justify-content: center;
+            align-content: center;
+            padding: 0 2rem;
+        }
+
+        .cuadropart1,
+        .cuadropart2 {
+            width: 120px;
+            height: 120px;
+            background-color: lightskyblue;
+            border: 2px solid black;
+        }
+
+        .container {
+            width: 750px;
+            margin: auto;
+        }
+        h2 {
+            margin-top: 5rem;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Aqui empieza la primera imagen -->
+         <h2>Modelo 1</h2>
+        <div class="modulos" id="modulo1">
+            <div class="cuadropart1"></div>
+            <div class="cuadropart1"></div>
+            <div class="cuadropart1"></div>
+            <div class="cuadropart1"></div>
+        </div>
+        <h2>Modelo 2</h2>
+        <div class="modulos" id="modulo2">
+            <div class="cuadropart1"></div>
+            <div class="cuadropart1"></div>
+            <div class="cuadropart1"></div>
+            <div class="cuadropart1"></div>
+        </div>
+        <h2>Modelo 3</h2>
+        <div class="modulos" id="modulo3">
+            <div class="cuadropart1"></div>
+            <div class="cuadropart1"></div>
+            <div class="cuadropart1"></div>
+            <div class="cuadropart1"></div>
+        </div>
+
+        <!-- Aqui empieza la segunda imagen -->
+         <h2>Modelo 4</h2>
+        <div class="modulos" id="modulo4">
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+        </div>
+        <h2>Modelo 5</h2>
+        <div class="modulos" id="modulo5">
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+        </div>
+        <h2>Modelo 6</h2>
+        <div class="modulos" id="modulo6">
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+            <div class="cuadropart2"></div>
+        </div>
+    </div>
+</body>
+
+</html>

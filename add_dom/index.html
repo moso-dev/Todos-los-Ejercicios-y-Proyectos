@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-anadirDom</title>
+    <style>
+        #caja {
+            width: 90%;
+            margin: 1rem auto;
+            border: 3px solid black;
+            padding: 0.5rem;
+            height: 700px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .circulo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: greenyellow;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.5rem;
+        }
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.5rem;
+        }
+
+        .cuadrado p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="btn_circle">Añadir Círculo</button>
+        <button id="btn_cuadrado">Añadir Cuadrado</button>
+        <button id="btn_delete">BORRAR</button>
+
+        <div id="caja">
+        </div>
+    </div>
+
+    <script>
+        let contenido;
+        
+        function anadirCircle() {
+            let contenido = window.prompt('Introduce texto para tu Forma Geometreica: ')
+            document.getElementById('caja').innerHTML += '<div class="circulo"><p>'+contenido+'</p></div>';
+        }
+        function anadirCuadrado() {
+            let contenido = window.prompt('Introduce texto para tu Forma Geometreica: ')
+            document.getElementById('caja').innerHTML += '<div class="cuadrado"><p>'+contenido+'</p></div>';
+        }
+        function borrar() {
+            document.getElementById('caja').innerHTML = '';
+        }
+
+        document.getElementById('btn_circle').onclick = anadirCircle;
+        document.getElementById('btn_cuadrado').onclick = anadirCuadrado;
+        document.getElementById('btn_delete').onclick = borrar;
+
+    </script>
+</body>
+</html>

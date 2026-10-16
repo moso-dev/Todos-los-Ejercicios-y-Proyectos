@@ -1,0 +1,89 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgba(232, 220, 202);
+}
+
+article {
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.playas {
+    display: flex;
+    margin: 1%;
+    gap: 20px;
+    border: 2px solid black;
+
+}
+
+.desiertos {
+    display: flex;
+    margin: 1%;
+    gap: 20px;
+    border: 2px solid black;
+
+}
+
+.bosques {
+    display: flex;
+    margin: 1%;
+    gap: 20px;
+    border: 2px solid black;
+
+}
+
+.nieve {
+    display: flex;
+    margin: 1%;
+    gap: 20px;
+    border: 2px solid black;
+
+}
+
+div {
+    margin: 1%;
+    padding: 1%;
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 30%;;
+}
+
+a {
+    text-align: center;
+    display: block;
+    border: 2px solid black;
+    border-radius: 10%;
+    margin: 1% 25%;
+    padding: 0.5%;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+img {
+    display: block;
+    margin: auto;
+    border: 1px solid black;
+    max-width: 100%;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+#autor {
+    border: 2px solid black;
+    margin: 0 45%;
+    padding: 0.2%;
+}

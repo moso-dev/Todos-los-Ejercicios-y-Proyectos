@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .letras {
+            margin: 2rem;
+        }
+
+        .letras span {
+            border: 1px solid;
+            margin: 1rem;
+            font-size: 1.2rem;
+            padding: .5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Separa el texto en párrafos</h1>
+    <p>El ejercicio consiste en separar cada palabra del input de texto siguiente en un párrafo html diferente. La
+        función tiene que limpiar los posibles espacios al principio y final de la cadena del input, y los espacios
+        dobles que puedan darse entre las palabras</p>
+    <label for="texto">Entrada: </label> <input type="text" name="texto" id="texto">
+    <button id="btn">Convertir</button>
+    <div class="salida">
+
+    </div>
+    <script>
+        function extraePalabras() {
+            //leer el texto del input y pasarlo a variable
+            let texto = document.querySelector('#texto').value;
+            //eliminar espacios al principio y al  final
+            let nuevo_texto = texto.trim();
+            //elimina espacios dobles a través de un bucle 
+            while (nuevo_texto.indexOf('  ') != -1) {
+                nuevo_texto = nuevo_texto.replaceAll('  ', ' ');
+            }
+            //convertimos la cadena en array usando como separador los espacios entre palabras
+            let palabras = nuevo_texto.split(' ');
+            //vaciamos el posible contenido de salida
+             document.querySelector('.salida').innerHTML='';
+            //bucle que genera un párrafo por cada palabra del array
+            //el párrafo contiene un span con la palabra y le añade un botón  para realizar la separación por letras
+            for (let palabra of palabras) {
+                let parrafo = document.createElement('p');
+                let text = document.createElement('span');
+                let boton = document.createElement('button');
+                boton.textContent = 'Descomponer'
+                text.textContent = palabra;
+                boton.onclick = descomponLetras;
+                parrafo.append(text, boton);
+                //pasar al DOM el HTML generado
+                document.querySelector('.salida').append(parrafo);
+                //otra forma
+                //parrafos += '<p><span>'+palabra + '</span><button onclick ="descomponLetras(this)">Descomponer</button></p>';
+            }
+        }
+        //la función para extraer las letras recibe como parámetro el propio botón sobre el que pulsamos
+        function descomponLetras() {
+            //variable para recoger el texto del elemento anteriora al botón (palabra)
+            let conjunto = this.previousElementSibling.textContent;
+            //accedemos al nodo parent del botón, para colocar en él el div de salida
+            let contenedor = this.parentNode;
+            //creamos el div que contendrá todas las letras
+            let salida = document.createElement('div');
+            //añadimos clase al div para darle formato a su contedido
+            salida.className = 'letras';
+            //bucle para recorrer cada letra del conjunto
+            for (let i = 0; i < conjunto.length; i++) {
+                //creamos nodo tipo span para cada letra 
+                let span = document.createElement('span');
+                //añadimos contenido al nodo (cada una de las letras por separado)
+                span.textContent = conjunto[i] + ' - ';
+                //comprobamos si es la última letra para no añadir el guion
+                if (i == conjunto.length - 1) {
+                    span.textContent = conjunto[i];
+                }
+                //pasamos el span al div que los contiene a todos
+                salida.append(span);
+            }
+            //pasamos el div al DOM
+            contenedor.append(salida);
+            //eliminamos el botón después de pulsarlo
+            this.remove();
+        }
+        document.querySelector('#texto').oninput = extraePalabras;
+
+    </script>
+</body>
+
+</html>

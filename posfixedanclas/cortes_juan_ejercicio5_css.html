@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejer05CSS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    main {
+      margin-top: 10%;
+    }
+
+    nav {
+      border: 2px solid red;
+      background-color: orange;
+      position: fixed;
+      height: 11.5%;
+      width: 100%;
+      padding: 1rem 25%;
+      top: 0;
+      z-index: 999;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      gap: 2rem 2rem;
+    }
+
+    a {
+      background-color: white;
+      padding: 0.5rem 5rem;
+      text-decoration: none;
+      color: red;
+    }
+
+    section {
+      border: 2px solid red;
+      background-color: rgb(255, 119, 0);
+      width: 1200px;
+      height: 500px;
+      margin: auto;
+      margin-bottom: 10%;
+      scroll-margin-top: 10rem;
+      padding: 0.5rem;
+      padding-bottom: 1rem;
+    }
+
+    h2 {
+      color: red;
+      margin: 0.5rem;
+      font-size: 2rem;
+    }
+
+    article {
+      width: 40%;
+      height: 90%;
+      float: left;
+      margin-left: 6.5%;
+      background-color: orange;
+      text-align: center;
+      position: relative;
+    }
+
+    .disparador {
+      border: 1px solid black;
+      background-color: red;
+      margin: 20% 40%;
+    }
+
+    .emergente {
+      position: absolute;
+      border: 1px solid black;
+      background-color: lightblue;
+      margin: -20% -30%;
+      display: none;
+    }
+
+    .disparador:hover+.emergente {
+      display: initial;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#sec1">Enlace a Seccion 1</a></li>
+          <li><a href="#sec2">Enlace a Seccion 2</a></li>
+          <li><a href="#sec3">Enlace a Seccion 3</a></li>
+          <li><a href="#sec4">Enlace a Seccion 4</a></li>
+          <li><a href="#sec5">Enlace a Seccion 5</a></li>
+          <li><a href="#sec6">Enlace a Seccion 6</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="box">
+        <section id="sec1">
+          <h2>Titulo de Seccion 1</h2>
+          <article>
+            <p class="disparador">Elemento disparador</p>
+            <p class="emergente">Cuadro emergente accionado por el disparador</p>
+          </article>
+          <article></article>
+        </section>
+      </div>
+      <div class="box">
+        <section id="sec2">
+          <h2>Titulo de Seccion 2</h2>
+          <article>
+            <p class="disparador">Elemento disparador</p>
+            <p class="emergente">Cuadro emergente accionado por el disparador</p>
+          </article>
+          <article></article>
+        </section>
+      </div>
+      <div class="box">
+        <section id="sec3">
+          <h2>Titulo de Seccion 3</h2>
+          <article>
+            <p class="disparador">Elemento disparador</p>
+            <p class="emergente">Cuadro emergente accionado por el disparador</p>
+          </article>
+          <article></article>
+        </section>
+      </div>
+      <div class="box">
+        <section id="sec4">
+          <h2>Titulo de Seccion 4</h2>
+          <article>
+            <p class="disparador">Elemento disparador</p>
+            <p class="emergente">Cuadro emergente accionado por el disparador</p>
+          </article>
+          <article></article>
+        </section>
+      </div>
+      <div class="box">
+        <section id="sec5">
+          <h2>Titulo de Seccion 5</h2>
+          <article>
+            <p class="disparador">Elemento disparador</p>
+            <p class="emergente">Cuadro emergente accionado por el disparador</p>
+          </article>
+          <article></article>
+        </section>
+      </div>
+      <div class="box">
+        <section id="sec6">
+          <h2>Titulo de Seccion 6</h2>
+          <article>
+            <p class="disparador">Elemento disparador</p>
+            <p class="emergente">Cuadro emergente accionado por el disparador</p>
+          </article>
+          <article></article>
+        </section>
+      </div>
+    </main>
+    <footer></footer>
+  </div>
+</body>
+
+</html>

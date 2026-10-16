@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main {
+    margin-top: 10%;
+}
+
+nav {
+    border: 2px solid red;
+    background-color: orange;
+    position: fixed;
+    height: 11.5%;
+    width: 100%;
+    padding: 1rem 25%;
+    top: 0;
+    z-index: 999;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem 2rem;
+}
+
+a {
+    background-color: white;
+    padding: 0.5rem 5rem;
+    text-decoration: none;
+    color: red;
+}
+
+section {
+    border: 2px solid red;
+    background-color: rgb(255, 119, 0);
+    width: 1200px;
+    height: 500px;
+    margin: auto;
+    margin-bottom: 10%;
+    scroll-margin-top: 10rem;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+h2 {
+    color: red;
+    margin: 0.5rem;
+    font-size: 2rem;
+}
+
+article {
+    width: 40%;
+    height: 90%;
+    float: left;
+    margin-left: 6.5%;
+    background-color: orange;
+    text-align: center;
+    position: relative;
+}
+
+.disparador {
+    border: 1px solid black;
+    background-color: red;
+    margin: 20% 40%;
+}
+
+.emergente {
+    position: absolute;
+    border: 1px solid black;
+    background-color: lightblue;
+    margin: -20% -30%;
+    display: none;
+}
+
+.disparador:hover + .emergente {
+    display: initial;
+}

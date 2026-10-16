@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario B</title>
+    <style>
+        body {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: brown;
+            font-style: oblique;
+            font-size: 2rem;
+        }
+
+        fieldset {
+            background-color: antiquewhite;
+            border: 10px solid brown;
+            border-radius: 2rem;
+        }
+
+        input,
+        select,
+        textarea {
+            background-color: brown;
+            color: white;
+            font-size: 1rem;
+            font-style: oblique;
+        }
+
+        .campo {
+            margin: 1rem;
+        }
+
+        button {
+            background-color: brown;
+            color: white;
+            font-style: oblique;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header></header>
+
+        <body>
+            <form action="#">
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <div class="campo">
+                        <label for="provincia">Provincia</label>
+                        <select name="provincia" id="provincia">
+                            <option value="01">Álava/Araba</option>
+                            <option value="02">Albacete</option>
+                            <option value="03">Alicante/Alacant</option>
+                            <option value="04">Almería</option>
+                            <option value="33">Asturias</option>
+                            <option value="05">Ávila</option>
+                            <option value="06">Badajoz</option>
+                            <option value="07">Balears (Illes)</option>
+                            <option value="08">Barcelona</option>
+                            <option value="09">Burgos</option>
+                            <option value="10">Cáceres</option>
+                            <option value="11">Cádiz</option>
+                            <option value="39">Cantabria</option>
+                            <option value="12">Castellón/Castelló</option>
+                            <option value="51">Ceuta</option>
+                            <option value="13">Ciudad Real</option>
+                            <option value="14">Córdoba</option>
+                            <option value="15">Coruña (A)</option>
+                            <option value="16">Cuenca</option>
+                            <option value="17">Girona</option>
+                            <option value="18">Granada</option>
+                            <option value="19">Guadalajara</option>
+                            <option value="20">Guipúzcoa/Gipuzkoa</option>
+                            <option value="21">Huelva</option>
+                            <option value="22">Huesca</option>
+                            <option value="23">Jaén</option>
+                            <option value="24">León</option>
+                            <option value="27">Lugo</option>
+                            <option value="25">Lleida</option>
+                            <option value="28">Madrid</option>
+                            <option value="29">Málaga</option>
+                            <option value="52">Melilla</option>
+                            <option value="30">Murcia</option>
+                            <option value="31">Navarra</option>
+                            <option value="32">Ourense</option>
+                            <option value="34">Palencia</option>
+                            <option value="35">Palmas (Las)</option>
+                            <option value="36">Pontevedra</option>
+                            <option value="26">Rioja (La)</option>
+                            <option value="37">Salamanca</option>
+                            <option value="38">Santa Cruz de Tenerife</option>
+                            <option value="40">Segovia</option>
+                            <option value="41">Sevilla</option>
+                            <option value="42">Soria</option>
+                            <option value="43">Tarragona</option>
+                            <option value="44">Teruel</option>
+                            <option value="45">Toledo</option>
+                            <option value="46">Valencia/València</option>
+                            <option value="47">Valladolid</option>
+                            <option value="48">Vizcaya/Bizkaia</option>
+                            <option value="49">Zamora</option>
+                            <option value="50">Zaragoza</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="nac">Fecha de nacimiento</label>
+                        <input type="number" id="nac">
+                        <label>de</label>
+                        <select name="nacmeses" id="nac">
+                            <option value="1">Enero</option>
+                            <option value="2">Febrero</option>
+                            <option value="3">Marzo</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Mayo</option>
+                            <option value="6">Junio</option>
+                            <option value="7">Julio</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Septiembre</option>
+                            <option value="10">Octubre</option>
+                            <option value="11">NovIembre</option>
+                            <option value="12">Diciembre</option>
+                        </select>
+                        <label>de</label>
+                        <input type="number">
+                    </div>
+
+                    <div class="campo">
+                        <label for="temas">Temas de interés</label>
+                        <select name="temas" id="temas" multiple>
+                            <option value="1">Administración de bases de datos</option>
+                            <option value="2">Análisis y programación</option>
+                            <option value="3">Arquitectura</option>
+                            <option value="4">Calidad</option>
+                            <option value="5">ERP, CRM, Business Intelligence</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datos Académicos</legend>
+
+                    <div class="campo">
+                        <label for="study">Estudios Realizados</label>
+                        <select name="study" id="study">
+                            <option value="1">Licenciatura</option>
+                            <option value="2">Master Académico</option>
+                            <option value="3">Certificado Cientifico</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="area">Formación Complementaria</label>
+                        <textarea name="area" id="area" placeholder="Este cuadro no tiene el texto centrado"></textarea>
+                    </div>
+                </fieldset>
+                <button type="submit">Enviar</button>
+            </form>
+        </body>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

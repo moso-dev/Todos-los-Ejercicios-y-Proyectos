@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-crearPárrafos</title>
+    <script src="https://kit.fontawesome.com/e87d10dd99.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: bisque;
+        }
+
+        header {
+            text-align: center;
+            font-size: 3rem;
+            font-family: "DynaPuff", system-ui;
+            margin: 1rem 0.5rem;
+        }
+
+        h1 {
+            text-shadow: 5px 5px 10px gray;
+        }
+
+        .in-lab {
+            font-family: "DynaPuff", system-ui;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        #par {
+            width: 30%;
+            height: 300px;
+            margin: 0.5rem auto;
+            display: block;
+            border-radius: 2rem;
+            padding: 1rem;
+            resize: none;
+            font-size: 1.2rem;
+            font-family: "Inter", sans-serif;
+        }
+
+        #btn_par, #btn_clear, #btn_reset_area {
+            font-family: "DynaPuff", system-ui;
+            display: block;
+            padding: 0.5rem;
+            font-size: 1.2rem;
+            background-color: green;
+            color: white;
+            border: 5px solid black;
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #btn_par:hover, #btn_clear:hover, #btn_reset_area:hover {
+            transform: scale(1.1);
+        }
+
+        #btn_par:active, #btn_clear:active,#btn_reset_area:active {
+            transform: scale(0.9);
+        }
+
+        .botones {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .hojadeparrafos {
+            border: 10px solid black;
+            width: 75%;
+            margin: 0.5rem auto;
+            padding: 1rem;
+            border-radius: 2rem;
+            background-color: rgb(245, 231, 214);
+        }
+
+        .hojadeparrafos h2 {
+            text-align: center;
+            font-family: "Inter", sans-serif;
+        }
+
+        p {
+            font-family: "Inter", sans-serif;
+            border: 2px solid gray;
+            background: whitesmoke;
+            padding: 1rem;
+            border-radius: 2rem;
+            margin: 1rem auto;
+            width: 90%;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Creador de Párrafos</h1>
+        </header>
+
+        <main>
+            <label for="par"><span class="in-lab">Introduce Tu Párrafo<span
+                        class="fa-solid fa-down-long flecha"></span></span></label>
+            <textarea name="par" id="par" autocomplete="off"></textarea>
+            <div class="botones">
+                <button id="btn_reset_area"><span class="fa-solid fa-rotate-left"></span></button>
+                <button id="btn_par">Añadir Párrafo</button>
+                <button id="btn_clear"><span class="fa-regular fa-trash-can"></span></button>
+            </div>
+
+
+            <div class="hojadeparrafos">
+                <h2>Párrafos creados</h2>
+                <div id="mis_parrafos">
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script>
+        //añadir párrafos
+        function anadirparrafos() {
+            let contenido = document.getElementById('par').value;
+            document.getElementById('mis_parrafos').innerHTML += '<p>' + contenido + '</p>';
+        }
+        // borrar párrafos
+        function limpiar() {
+            document.getElementById('mis_parrafos').innerHTML = '';
+        }
+        document.getElementById('btn_par').onclick = anadirparrafos;
+        document.getElementById('btn_clear').onclick = limpiar;
+
+        //limpar campo de texto
+        function areaReset() {
+            document.getElementById('par').value = '';
+        }
+        document.getElementById('btn_reset_area').onclick = areaReset;
+    </script>
+</body>
+
+</html>

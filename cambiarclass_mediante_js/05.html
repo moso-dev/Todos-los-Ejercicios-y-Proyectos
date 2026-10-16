@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiando clases de CSS con JS</title>
+    <style>
+        .cuadro {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            text-align: center;
+            line-height: 200px;
+            transition: all 0.5s ease;
+        }
+        
+        .circulo {
+            transition: all 0.5s ease;
+            background-color: lime;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Uso de la propiedad <em>className</em></h1>
+        <button id="btn_class">Cambia Clase</button>
+        <div id="elemento" class="cuadro">Ejemplo</div>
+    </div>
+
+
+    <script>
+        
+        function cambiaClase() {
+            if ( document.getElementById('elemento').className == 'cuadro') {
+                document.getElementById('elemento').className = 'circulo';
+            } else {
+                document.getElementById('elemento').className = 'cuadro';
+            }
+        }
+
+        document.getElementById('btn_class').onclick = cambiaClase;
+    </script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejer-04</title>
+    <script src="https://kit.fontawesome.com/e87d10dd99.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #container {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 5px solid gray;
+            width: 80%;
+            margin: 4rem auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            font-size: 2rem;
+            text-decoration: underline 5px solid black;
+            margin-bottom: 2rem;
+            display: none;
+        }
+
+        #pantalla {
+            width: 80%;
+            margin: 1rem auto;
+            height: 500px;
+            background-color: black;
+            position: relative;
+        }
+
+        #objeto {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all linear 0.3s;
+            border-radius: 0;
+        }
+
+        #gamepad,
+        #distancia {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #gamepad {
+            margin-bottom: 2rem;
+        }
+
+        .flechas {
+            width: 50px;
+            height: 50px;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .flx_leftup {
+            rotate: 45deg;
+        }
+        .flx_rightup {
+            rotate: 135deg;
+        }
+        .flx_rightdown {
+            rotate: -140deg;
+        }
+        .flx_leftdown {
+            rotate: -45deg;
+        }
+
+
+        
+        #contador_distancia {
+            text-align: center;
+            width: 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>Movimiento de Elemento</h1>
+        </header>
+        <main>
+            <div id="controles">
+                <div id="gamepad">
+
+                    <div class="padsuperior">
+                        <button id="btn_leftup" class="flechas"><span class="fa-solid fa-left-long flx_leftup"></span></button>
+                        <button id="up" class="flechas"><span class="fa-solid fa-arrow-up"></span></button>
+                        <button id="btn_rightup" class="flechas"><span class="fa-solid fa-left-long flx_rightup"></span></button>
+                    </div>
+
+                    <div class="padcentral">
+                        <button id="izq" class="flechas"><span class="fa-solid fa-arrow-left"></span></button>
+                        <button id="centro" class="flechas"><span class="fa-solid fa-circle"></span></button>
+                        <button id="dcha" class="flechas"><span class="fa-solid fa-arrow-right"></span></button>
+                    </div>
+
+                    <div class="padinferior">
+                        <button id="btn_leftdown" class="flechas"><span class="fa-solid fa-left-long flx_leftdown"></span></button>
+                        <button id="abajo" class="flechas"><span class="fa-solid fa-arrow-down"></span></button>
+                        <button id="btn_rightdown" class="flechas"><span class="fa-solid fa-left-long flx_rightdown"></span></button>
+                    </div>
+                </div>
+
+                <div id="distancia">
+                    <label for="barra_distancia"><strong>Velocidad: </strong></label>
+                    <input type="range" min="0" max="200" step="10" id="barra_distancia">
+                    <input type="text" id="contador_distancia" disabled>
+                </div>
+
+            </div>
+
+            <div id="pantalla">
+                <div id="objeto"></div>
+            </div>
+        </main>
+    </div>
+
+
+    <script>
+        /*  PRIMER CASO
+        let topActual = 0;
+        let leftActual = 0;
+        
+        function movAbajo() {
+            topActual += 100;
+            document.getElementById('objeto').style.top = topActual+'px';
+        }
+        
+        function movArriba() {
+            topActual -= 100;
+            document.getElementById('objeto').style.top = topActual+'px';
+        }
+        
+        function movIzq() {
+            leftActual -= 100;
+            document.getElementById('objeto').style.left = leftActual+'px';
+        }
+        
+        function movDcha() {
+            leftActual += 100;
+            document.getElementById('objeto').style.left = leftActual+'px';
+        }
+        
+        function movCentro() {
+            topActual = 300;
+            leftActual = 700;
+            document.getElementById('objeto').style.top = topActual + 'px';
+            document.getElementById('objeto').style.left = leftActual + 'px';
+        }
+        
+        document.getElementById('izq').onclick = movIzq;
+        document.getElementById('abajo').onclick = movAbajo;
+        document.getElementById('up').onclick = movArriba;
+        document.getElementById('dcha').onclick = movDcha;
+        document.getElementById('centro').onclick = movCentro;
+        */
+
+        //SEGUNDA FORMA DE HACERLO
+        let velocidad;
+
+        const elemento = document.getElementById('objeto');
+
+        function movAbajo() {
+            let posTop = elemento.offsetTop;
+            posTop += velocidad;
+
+            let altura_pantalla = document.getElementById('pantalla').offsetHeight
+            if (posTop > altura_pantalla - 100) {
+                posTop = altura_pantalla - 100;
+            }
+            elemento.style.top = posTop + 'px';
+            console.log(elemento, posTop);
+        }
+
+        function movArriba() {
+            let posTop = elemento.offsetTop;
+            posTop -= velocidad;
+
+            if (posTop < 0) {
+                posTop = 0;
+            }
+
+            elemento.style.top = posTop + 'px';
+        }
+
+        function movIzq() {
+            let posLeft = elemento.offsetLeft;
+            posLeft -= velocidad;
+
+            if (posLeft < 0) {
+                posLeft = 0;
+            }
+
+            elemento.style.left = posLeft + 'px';
+        }
+
+        function movDcha() {
+            let posLeft = elemento.offsetLeft;
+            posLeft += velocidad;
+
+            let ancho_pantalla = document.getElementById('pantalla').offsetWidth
+            if (posLeft > ancho_pantalla - 100) {
+                posLeft = ancho_pantalla - 100;
+            }
+
+            elemento.style.left = posLeft + 'px';
+        }
+
+        function movCentro() {
+            elemento.style.top = 'calc(50% - 50px)';
+            elemento.style.left = 'calc(50% - 50px)'
+        }
+
+        //DIAGONALES
+        function leftUp() {
+            movIzq()
+            movArriba()
+        }
+
+        function rightUp() {
+            movDcha()
+            movArriba()
+        }
+
+        function leftDown() {
+            movIzq()
+            movAbajo()
+        }
+
+        function rightDown() {
+            movDcha()
+            movAbajo()
+        }
+
+        function setSpeed() {
+            velocidad = parseInt(document.getElementById('barra_distancia').value);
+            document.getElementById('contador_distancia').value = velocidad
+        }
+
+        document.getElementById('izq').onclick = movIzq;
+        document.getElementById('abajo').onclick = movAbajo;
+        document.getElementById('up').onclick = movArriba;
+        document.getElementById('dcha').onclick = movDcha;
+        document.getElementById('centro').onclick = movCentro;
+        //botones diagonales
+        document.getElementById('btn_leftup').onclick = leftUp;
+        document.getElementById('btn_rightup').onclick = rightUp;
+        document.getElementById('btn_leftdown').onclick = leftDown;
+        document.getElementById('btn_rightdown').onclick = rightDown;
+
+        
+        document.getElementById('barra_distancia').onchange = setSpeed;
+
+        setSpeed()
+        movCentro()
+
+    </script>
+</body>
+
+</html>

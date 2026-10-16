@@ -1,0 +1,112 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url(imgs/fondo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+table, th, tr, td, caption {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    background-color: #000000a2;
+}
+table {
+    border-top: 2px solid gray;
+    scroll-margin-top: 200px;
+}
+section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+}
+
+caption {
+    width: 600px;
+    height: 72px;
+    color: white;
+    line-height: 72px;
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 4px 1.5px 4px gray;
+}
+td, th{
+    width: 60px;
+    height: 36px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+img {
+    width: 160px;
+    height: 288px;
+    border-left: 1px solid gray;
+}
+
+.nomes {
+    color: gray;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 1px 50px black;
+
+}
+
+nav {
+    margin: 1rem;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+ul li {
+    width: 8.33%;
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 0.5rem;
+    color: white;
+    text-shadow: 2px 1.5px 2px gray;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul li a:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 5rem;
+    color: white;
+    text-shadow: 5px 2px 6px gray;
+}
+
+article {
+    border: 2px solid white;
+    border-radius: 3rem;
+    overflow: auto;
+}

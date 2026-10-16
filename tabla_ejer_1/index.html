@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV en Tabla</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <table>
+            <caption>Curriculum en Fotmato Tabla</caption>
+            <thead>
+                <tr>
+                    <th colspan="4">DATOS PERSONALES</th>
+                </tr>
+            </thead>
+            <tfoot></tfoot>
+            <tbody>
+                <tr>
+                    <th>Foto</th>
+                    <td><img src="imgs/perfil.jpg" alt="perfil"></td>
+                </tr>
+                <tr>
+                    <th>Nombre</th>
+                    <td>Juan</td>
+                </tr>
+                <tr>
+                    <th>Apellidos</th>
+                    <td>Cortés Cortés</td>
+                </tr>
+                <tr>
+                    <th>Fecha Nac.</th>
+                    <td>24/06/2006</td>
+                </tr>
+                <tr>
+                    <th>Tlf</th>
+                    <td>+34 600 100 200</td>
+                </tr>
+                <tr>
+                    <th>DNI</th>
+                    <td>01964612H</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>correoelectronico@gmail.com</td>
+                </tr>
+    
+                <!-- Tabla de Formacion anidada -->
+                <tr id="tabla-anidada1">
+                    <td colspan="2">
+                        <table class="tablon">
+                            <thead>
+                                <tr>
+                                    <th colspan="4">FORMACIÓN</th>
+                                </tr>
+                                <tr>
+                                    <th>Estudios</th>
+                                    <th>Año Fin</th>
+                                    <th>Centro</th>
+                                    <th>Valoración</th>
+                                </tr>
+                            </thead>
+                            <tfoot></tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>Curso de Cocina: Cdt Gandia</td>
+                                    <td>2025</td>
+                                    <td>Cdt Gandía</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>Curso Básico de Cocina: Cdt Gandia</td>
+                                    <td>2024</td>
+                                    <td>Cdt Gandía</td>
+                                    <td>8,5</td>
+                                </tr>
+                                <tr>
+                                    <td>Carnet de Manipulador de Alimentos: Cdt Gandia</td>
+                                    <td>2023</td>
+                                    <td>Cdt Gandía</td>
+                                    <td>10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+    
+                <!-- Tabla de Experiencia anidada -->
+                <tr id="tabla-anidada2">
+                    <td colspan="2">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="4">EXPERIENCIA PROFESIONAL</th>
+                                </tr>
+                                <tr>
+                                    <th>Puesto</th>
+                                    <th>Duración</th>
+                                    <th>Empresa</th>
+                                    <th>Tareas</th>
+                                </tr>
+                            </thead>
+                            <tfoot></tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>Cocinero</td>
+                                    <td>1 año</td>
+                                    <td>Safra Safor</td>
+                                    <td>Elaborar comida</td>
+                                </tr>
+                                <tr>
+                                    <td>Cocinero</td>
+                                    <td>3 meses</td>
+                                    <td>Oli-Ba-Ba Beach Club</td>
+                                    <td>Cocinado y emplatado de comidas</td>
+                                </tr>
+                                <tr>
+                                    <td>Ayudante de Cocina</td>
+                                    <td>Tasca Matilde</td>
+                                    <td>3 meses</td>
+                                    <td>Preparacion de alimentos y limpieza de utensilios</td>
+                                </tr>
+                                <tr>
+                                    <td>Ayudante de Cocinero</td>
+                                    <td>Pastisseria Salva Catering</td>
+                                    <td>3 meses</td>
+                                    <td>Elaboracion de alimentos y ayudar al cocinero</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+    
+            </tbody>
+        </table>
+    </div>
+
+
+
+</body>
+
+</html>

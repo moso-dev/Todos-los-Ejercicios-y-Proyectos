@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1rº Transicion</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Goblin+One&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rock+Salt&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Goblin+One&family=Londrina+Sketch&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rock+Salt&display=swap');
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #9acd32;
+        }
+
+        h1 {
+            font-family: "Rock Salt", cursive;
+            font-weight: 400;
+            font-style: normal;
+            color: #ff00ff;
+            text-align: center;
+            text-shadow: 2px 2px 2px #8C377A;
+            transition: all 0.5s ease;
+            font-size: 5rem;
+        }
+
+        h1:hover {
+            color: #8C377A;
+            text-shadow: 2px 2px 8px #ff00ff;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            transition: all 0.4s ease;
+            position: absolute;
+            top: 100%;
+        }
+        
+        h3 {
+            color: #90EE90;
+            font-size: 4rem;
+            font-family: "Londrina Sketch", sans-serif;
+            font-weight: 999;
+            font-style: normal;
+            position: absolute;
+            left: 20%;
+            transition: all 0.4s ease 0.35s;
+            z-index: 2;
+            top: calc(100% - 85px);
+            transition: all 0.4s ease;
+        }
+        
+        .discos {
+            display: flex;
+            width: 85%;
+            margin: auto;
+            gap: 2rem;
+        }
+        
+        article {
+            border: 3px solid #008000;
+            position: relative;
+            overflow: hidden;
+            width: 1000px;
+            height: 500px;
+        }
+        
+        article:hover img {
+            top: 0;
+            top: calc(0% + 84px);
+        }
+        
+        article:hover h3 {
+            top: -1%;
+        }
+        
+        .emoji {
+            display: inline-block;
+            transition: all 0.4s ease;
+        }
+        article:hover .emoji {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>1977. El año del punk-rock</h1>
+        </header>
+        <main>
+            <section class="discos">
+                <article>
+                    <div class="cartelera">
+                        <h3>Sex Pistols <span class="emoji">&#x1F4E4;</span></h3>
+                        <img src="imgs/nevermind-pistols.jpg" alt="nevermind disco">
+                    </div>
+                </article>
+
+                <article>
+                    <div class="carterela">
+                        <h3>Ramones <span class="emoji">&#x1F4E4;</span></h3>
+                        <img src="imgs/ramones-rocket.jpg" alt="ramones disco">
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

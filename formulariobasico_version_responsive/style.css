@@ -1,0 +1,152 @@
+        * {
+            border-radius: 0.3rem;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        label {
+            display: block;
+        }
+
+        .caja1,
+        .caja2,
+        .caja3 {
+            background-color: lightgray;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            padding: 0.9rem;
+        }
+
+        .caja4 {
+            background-color: gray;
+        }
+
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .campos1,
+        .campos2,
+        .campos3 {
+            border: 1px solid white;
+            padding: 0.5rem;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .pieform {
+            justify-content: space-around;
+
+        }
+
+
+        .campos3 {
+            height: 100px
+        }
+
+        form {
+            margin-top: 0;
+        }
+
+        p {
+            color: white;
+        }
+
+        @media (min-width: 670px) {
+            * {
+                border-radius: 0.3rem;
+                margin: 0;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            label {
+                display: block;
+            }
+
+            .caja1,
+            .caja2,
+            .caja3 {
+                background-color: lightgray;
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                flex-wrap: wrap;
+                padding: 0.9rem;
+            }
+
+            .caja4 {
+                background-color: gray;
+            }
+
+            fieldset {
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .campos1,
+            .campos2,
+            .campos3 {
+                border: 1px solid white;
+                padding: 0.5rem;
+                box-sizing: border-box;
+            }
+
+            .campos1 {
+                width: 30%;
+            }
+
+            .pieform {
+                justify-content: space-around;
+
+            }
+
+            .campos2 {
+                width: 47%;
+            }
+
+            .campos3 {
+                width: 47%;
+                height: 100px
+            }
+
+            form {
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 0;
+            }
+
+            p {
+                color: white;
+            }
+        }
+
+        @media (min-width: 945px) {
+            fieldset {
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            
+            form {
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+        }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Videos Locales</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .box {
+            width: 70%;
+            margin: auto;
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 2rem;
+            background: linear-gradient(to bottom, #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%);
+            border-radius: 2rem;
+        }
+
+        .boxvisor {
+            width: 40%;
+            border: 5px solid black;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Visor de Videos</h1>
+        </header>
+        <main>
+            <section class="box">
+                <article class="boxvisor">
+                    <video src="vids/ejemplo1.mp4" poster="imgs/platanos.jpg" controls></video>
+                </article>
+                <article class="boxvisor">
+                    <video src="vids/ejemplo2.mov" poster="imgs/camino.jpg" controls></video>
+                </article>
+                <article class="boxvisor">
+                    <video src="vids/ejemplo3.mov" poster="imgs/gusano.jpg" controls></video>
+                </article>
+                <article class="boxvisor">
+                    <video src="vids/ejemplo4.mp4" poster="imgs/cascada.webp" controls></video>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

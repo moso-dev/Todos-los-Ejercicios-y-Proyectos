@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19-ejer</title>
+    <style>
+        body {
+            background-color: lightgreen;
+        }
+
+        .cajas {
+            display: flex;
+            background-color: whitesmoke;
+            border: 2px solid black;
+            align-items: center;
+            padding: 0.5rem;
+            width: 90%;
+            margin: 0 auto 1rem;
+        }
+
+        .voto {
+            user-select: none;
+            cursor: pointer;
+            border: 1px solid black;
+            background-color: lightgreen;
+            color: green;
+            font-size: 2rem;
+            padding: 0.2rem 2rem 0.2rem 2rem;
+            transition: all 1s ease;
+        }
+
+        .boton {
+            display: none;
+        }
+
+        .estrellas {
+            width: 0;
+            overflow: hidden;
+            height: 50px;
+            font-size: 2rem;
+            background-color: rgb(46, 139, 87, 1);
+            animation-name: desplazamiento;
+            animation-duration: 1.5s;
+            animation-play-state: paused;
+            animation-fill-mode: forwards;
+        }
+
+        .boton:checked +*+ .estrellas {
+            animation-play-state: running;
+        }
+        .boton:checked+.voto {
+            background-color: green;
+            color: lightgreen;
+        }
+
+        .boton:not(:checked)+*+.estrellas{
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes desplazamiento {
+            from {
+                width: 0;
+            }
+
+            10% {
+                width: initial;
+                rotate: calc(1000deg);
+                background-color: rgb(46, 139, 87, 1);
+            }
+            
+            15% {
+                rotate: calc(2000deg);
+                transform: scale(300%);
+            }
+            20% {
+                background-color: rgb(46, 139, 87, 0.2);  
+            }
+
+            to {
+                width: initial;
+                margin-left: 20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Da Tu Valoración</h1>
+        </header>
+        <main>
+            <section class="cajas"><input type="checkbox" id="voto1" class="boton" autocomplete="off"><label for="voto1"
+                    class="voto">Voto
+                    1</label><span class="estrellas">&#127775;</span></section>
+
+            <section class="cajas"><input type="checkbox" id="voto2" class="boton" autocomplete="off"><label for="voto2"
+                    class="voto">Voto
+                    2</label><span class="estrellas">&#127775;&#127775;</span></section>
+
+            <section class="cajas"><input type="checkbox" id="voto3" class="boton" autocomplete="off"><label for="voto3"
+                    class="voto">Voto
+                    3</label><span class="estrellas">&#127775;&#127775;&#127775;</span></section>
+
+            <section class="cajas"><input type="checkbox" id="voto4" class="boton" autocomplete="off"><label for="voto4"
+                    class="voto">Voto
+                    4</label><span class="estrellas">&#127775;&#127775;&#127775;&#127775;</span></section>
+
+            <section class="cajas"><input type="checkbox" id="voto5" class="boton" autocomplete="off"><label for="voto5"
+                    class="voto">Voto
+                    5</label><span class="estrellas">&#127775;&#127775;&#127775;&#127775;&#127775;</span></section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

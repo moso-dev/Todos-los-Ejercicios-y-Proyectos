@@ -1,0 +1,43 @@
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.todo {
+    background-color: rgba(128, 128, 128, 0.5);
+    width: 65%;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    border-radius: 5%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+    padding: 2%;
+    font-size: 4rem;
+    transform: translate(600px, 50px);
+    text-decoration: underline;
+}
+
+#foto{
+    padding-left: 2%;
+    border-radius: 20px;
+}
+
+.datos {
+     margin-top: -17%;
+     margin-left: 22%;
+     margin-bottom: 10%;
+}
+
+main {
+    margin: 2%;
+}
+
+footer {
+    margin: 2%;
+}
+
+.carnet {
+    padding-bottom: 2px;
+}

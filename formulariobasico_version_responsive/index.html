@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario C</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header><h1><strong>Formulario HTML5</strong></h1></header>
+        <main>
+            <form action="#">
+                <div class="caja1">
+                    <fieldset>
+                        <div class="campos1">
+                            <label for="nameuser">Nombre:</label>
+                            <input type="text" name="nameuser" id="nameuser" placeholder="Tu nombre aquí">
+                            <p>Tipo texto</p>
+                        </div>
+                        <div class="campos1">
+                            <label for="correo">E-mail:</label>
+                            <input type="email" name="emailuser" id="correo">
+                            <p>Tipo email</p>
+                        </div>
+                        <div class="campos1">
+                            <label for="tel">Teléfono:</label>
+                            <input type="text" id="tel" name="teluser" placeholder="teléfono actual">
+                            <p>Tipo teléfono</p>
+                        </div>
+                        <div class="campos1">
+                            <label for="nac">Fecha  Nacimiento:</label>
+                            <input type="date">
+                            <p>Tipo fecha</p>
+                        </div>
+                        <div class="campos1">
+                            <label for="horas">Horas semanales estudio:</label>
+                            <input type="range" min="0" max="60" step="5">
+                            <p>Tipo rango (de 0 a 60 con incrementos de 5)</p>
+                        </div>
+                        <div class="campos1">
+                            <label for="pass">Escribe tu contraseña:</label>
+                            <input type="password" name="passuser" id="pass" placeholder="contraseña">
+                            <p>Tipo password</p>
+
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="caja2">
+                    <fieldset>
+                        <div class="campos2">
+                            <label>Seleciona rango de edad:</label>
+                            <input type="radio" id="20" name="agerange"><label for="20">Menos de 20 años</label>
+                            <input type="radio" id="21" name="agerange"><label for="21">Entre 20 y 40 años</label>
+                            <input type="radio" id="40" name="agerange"><label for="40">Mas de 40 años</label>
+                        </div>
+                        <div class="campos2">
+                            <label>Indica los temas de interés:</label>
+                            <input type="radio" id="hss" name="lengui"><label for="hss">HTML y CSS</label>
+                            <input type="radio" id="java" name="lengui"><label for="java">JavaScript</label>
+                            <input type="radio" id="php" name="lengui"><label for="php">PHP</label>
+                        </div>
+                        <div class="campos2">
+                            <label>Indica el nivel de estudio terminado:</label>
+                            <select name="study" id="study" multiple>
+                                <option value="1">ESO</option>
+                                <option value="2">Bachillerato</option>
+                                <option value="3">Grado medio</option>
+                                <option value="4">Grado superior</option>
+                                <option value="5">Licenciatura</option>
+                                <option value="6">Doctorado</option>
+                            </select>
+                            <p>Elementos: ESO, Bachillerato, Grado medio, Grado superior, Licenciatura, Doctorado.</p>
+                        </div>
+                        <div class="campos2">
+                            <label>Selecciona un turno preferido de clase:</label>
+                            <select name="turno" id="turno">
+                                <option value="1">Indiferente</option>
+                                <option value="2">Mañana</option>
+                                <option value="3">Tarde</option>
+                                <option value="4">Noche</option>
+                            </select>
+                            <p>Elementos: Indiferente, Mañana, Tarde, Noche.</p>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="caja3">
+                    <fieldset>
+                        <div class="campos3">
+                            <label for="coment">Comentario:</label>
+                            <textarea name="coment" id="coment" placeholder="Escribe aqui tu comentario"></textarea>
+                        </div>
+                        <div class="campos3">
+                            <label>Seleciona un archivo</label>
+                            <input type="file">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="caja4">
+                    <fieldset class="pieform">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Borrar datos</button>
+                        <button type="button">Archivar</button>
+                    </fieldset>
+                </div>
+            </form>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-Ejer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            background-color: #ffd302;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            color: #3c487c;
+            text-align: center;
+            font-size: 5rem;
+            padding: 0.5rem;
+        }
+
+        .caja {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .izq,
+        main {
+            background-color: #e1e9f6;
+        }
+
+        .izq,
+        main,
+        .dcha {
+            height: 600px;
+            padding: 0.5rem;
+        }
+
+        article {
+            background-color: white;
+            height: 140px;
+            width: 280px;
+            padding: 0.5rem;
+        }
+
+        section {
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .dcha {
+            background-color: #3c487c;
+        }
+
+        #h2_dcha {
+            color: white;
+            font-weight: bold;
+        }
+
+        .h3_dcha {
+            color: #44578d;
+        }
+
+        .h_izq {
+            color: #c12737;
+        }
+
+        h3 {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            margin-top: 1rem;
+            border-top: 10px solid #3c487c;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #hmain {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>En la cabecera del sitio Web usamos un<br>&lt;h1></h1>
+        </header>
+
+        <div class="caja">
+            <aside class="izq">
+                <h2 class="h_izq">BLOQUE LATERAL CON &lt;H2></h2>
+                <section id="sec_izq">
+                    <article>
+                        <h3 class="h_izq">Apartado 1</h3>
+                        <p> Entradilla para el apartado 1, con un par de líneas de texto.</p>
+                    </article>
+                    <article>
+                        <h3 class="h_izq">Apartado 2</h3>
+                        <p> Entradilla para el apartado 2, con un par de líneas de texto.</p>
+                    </article>
+                    <article>
+                        <h3 class="h_izq">Apartado 3</h3>
+                        <p> Entradilla para el apartado 3, con un par de líneas de texto.</p>
+                    </article>
+                </section>
+            </aside>
+
+            <main>
+                <img src="principal.jpg" alt="foto principal">
+                <h2 id="hmain"> Este es el título del apartado central. Es una etiqueta h2</h2>
+                <p>El párrafo de muestra, son varias líneas copiadas y pegadas sin ningún sentido. El párrafo de
+                    muestra, son varias líneas copiadas y pegadas sin ningún sentido. El párrafo de muestra, son varias
+                    líneas copiadas y pegadas sin ningún sentido.El párrafo de muestra, son varias líneas copiadas y
+                    pegadas sin ningún sentido.</p>
+                <p>El párrafo de muestra, son varias líneas copiadas y pegadas sin ningún sentido. El párrafo de
+                    muestra, son varias líneas copiadas y pegadas sin ningún sentido. El párrafo de muestra, son varias
+                    líneas copiadas y pegadas sin ningún sentido.El párrafo de muestra, son varias líneas copiadas y
+                    pegadas sin ningún sentido.</p>
+            </main>
+
+            <aside class="dcha">
+                <h2 id="h2_dcha">BLOQUE NOTICIAS</h2>
+                <section id="sec_dcha">
+                    <article>
+                        <h3 class="h3_dcha">NOTICIA 1</h3>
+                        <p> Entradilla para la noticia 1, con un par de líneas de texto.</p>
+                    </article>
+                    <article>
+                        <h3 class="h3_dcha">NOTICIA 2</h3>
+                        <p> Entradilla para la noticia 2, con un par de líneas de texto.</p>
+                    </article>
+                    <article>
+                        <h3 class="h3_dcha">NOTICIA 3</h3>
+                        <p> Entradilla para la noticia 3, con un par de líneas de texto.</p>
+                    </article>
+                </section>
+            </aside>
+        </div>
+
+        <footer>
+            <ul>
+                <li class="li1">Dirección: calle, código postal y población</li>
+                <li class="li2">Email: micorreo@dominio.com</li>
+                <li class="li3">Teléfono: 123 456 789 </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>
