@@ -1,6 +1,6 @@
 # Todos los Ejercicios y Proyectos
 
-Este repositorio reúne una colección de ejercicios y proyectos de desarrollo web, principalmente enfocados en HTML, CSS y algunos conceptos de JavaScript.
+Este repositorio reúne una colección de ejercicios y proyectos de desarrollo web, principalmente enfocados en HTML, CSS y JavaScript.
 
 ## Descripción
 
